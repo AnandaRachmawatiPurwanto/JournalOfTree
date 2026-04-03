@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "myJounalingApp",
+			"path": "../../myJounalingApp"
+		},
+		{
+			"name": "journalTree",
+			"path": "."
+		},
+		{
+			"name": "Models",
+			"path": "Models"
+		},
+		{
+			"name": "ViewModels",
+			"path": "ViewModels"
+		},
+		{
+			"name": "Views",
+			"path": "Views"
+		},
+		{
+			"name": "Assets.xcassets",
+			"path": "Assets.xcassets"
+		}
+	],
+	"settings": {}
+}
