@@ -70,7 +70,7 @@ struct ContentView: View {
         }
         .animation(.spring(response: 0.35, dampingFraction: 0.8), value: isSidebarVisible)
         .animation(.easeInOut(duration: 0.2), value: store.activeView)
-        .onChange(of: store.activeView) { newView in
+        .onChange(of: store.activeView) { _, newView in
             if newView == .form {
                 // Jika ingin form tetap bisa disandingkan, kita bisa disable baris di bawah ini
                 // Tapi dibiarkan tertutup otomatis sesuai code awal agak form tampil luas.

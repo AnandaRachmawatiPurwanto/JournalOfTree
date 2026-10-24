@@ -6,14 +6,66 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		17D195BE2FB8967100BCB9C1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D195BD2FB8967100BCB9C1 /* WidgetKit.framework */; };
+		17D195C02FB8967100BCB9C1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D195BF2FB8967100BCB9C1 /* SwiftUI.framework */; };
+		17D195CF2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 17D195BB2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17D195CD2FB8967100BCB9C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 175E854B2F690E6F00F31747 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17D195BA2FB8967100BCB9C1;
+			remoteInfo = TreeWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17D195D42FB8967100BCB9C1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				17D195CF2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		175E85532F690E6F00F31747 /* journalTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = journalTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D195BB2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TreeWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D195BD2FB8967100BCB9C1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		17D195BF2FB8967100BCB9C1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		17D196CB2FB89B6300BCB9C1 /* TreeWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TreeWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		17D195D32FB8967100BCB9C1 /* Exceptions for "TreeWidgetExtension" folder in "TreeWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 17D195BA2FB8967100BCB9C1 /* TreeWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		175E85552F690E6F00F31747 /* journalTree */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = journalTree;
+			sourceTree = "<group>";
+		};
+		17D195C12FB8967100BCB9C1 /* TreeWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				17D195D32FB8967100BCB9C1 /* Exceptions for "TreeWidgetExtension" folder in "TreeWidgetExtensionExtension" target */,
+			);
+			path = TreeWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +78,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17D195B82FB8967100BCB9C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D195C02FB8967100BCB9C1 /* SwiftUI.framework in Frameworks */,
+				17D195BE2FB8967100BCB9C1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		175E854A2F690E6F00F31747 = {
 			isa = PBXGroup;
 			children = (
+				17D196CB2FB89B6300BCB9C1 /* TreeWidgetExtensionExtension.entitlements */,
 				175E85552F690E6F00F31747 /* journalTree */,
+				17D195C12FB8967100BCB9C1 /* TreeWidgetExtension */,
+				17D195BC2FB8967100BCB9C1 /* Frameworks */,
 				175E85542F690E6F00F31747 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				175E85532F690E6F00F31747 /* journalTree.app */,
+				17D195BB2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		17D195BC2FB8967100BCB9C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17D195BD2FB8967100BCB9C1 /* WidgetKit.framework */,
+				17D195BF2FB8967100BCB9C1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +129,12 @@
 				175E854F2F690E6F00F31747 /* Sources */,
 				175E85502F690E6F00F31747 /* Frameworks */,
 				175E85512F690E6F00F31747 /* Resources */,
+				17D195D42FB8967100BCB9C1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				17D195CE2FB8967100BCB9C1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				175E85552F690E6F00F31747 /* journalTree */,
@@ -70,6 +146,28 @@
 			productReference = 175E85532F690E6F00F31747 /* journalTree.app */;
 			productType = "com.apple.product-type.application";
 		};
+		17D195BA2FB8967100BCB9C1 /* TreeWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17D195D02FB8967100BCB9C1 /* Build configuration list for PBXNativeTarget "TreeWidgetExtensionExtension" */;
+			buildPhases = (
+				17D195B72FB8967100BCB9C1 /* Sources */,
+				17D195B82FB8967100BCB9C1 /* Frameworks */,
+				17D195B92FB8967100BCB9C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				17D195C12FB8967100BCB9C1 /* TreeWidgetExtension */,
+			);
+			name = TreeWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = TreeWidgetExtensionExtension;
+			productReference = 17D195BB2FB8967100BCB9C1 /* TreeWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -77,11 +175,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					175E85522F690E6F00F31747 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					17D195BA2FB8967100BCB9C1 = {
+						CreatedOnToolsVersion = 26.5;
 					};
 				};
 			};
@@ -100,12 +201,20 @@
 			projectRoot = "";
 			targets = (
 				175E85522F690E6F00F31747 /* journalTree */,
+				17D195BA2FB8967100BCB9C1 /* TreeWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		175E85512F690E6F00F31747 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17D195B92FB8967100BCB9C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17D195B72FB8967100BCB9C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17D195CE2FB8967100BCB9C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17D195BA2FB8967100BCB9C1 /* TreeWidgetExtensionExtension */;
+			targetProxy = 17D195CD2FB8967100BCB9C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		175E855C2F690E7000F31747 /* Debug */ = {
@@ -248,9 +372,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = journalTree/journalTree.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FBSQ6AMKJ;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -278,9 +404,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = journalTree/journalTree.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FBSQ6AMKJ;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -297,6 +425,72 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		17D195D12FB8967100BCB9C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TreeWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FBSQ6AMKJ;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TreeWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TreeWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanda.journalTree.TreeWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		17D195D22FB8967100BCB9C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TreeWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FBSQ6AMKJ;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TreeWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TreeWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanda.journalTree.TreeWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,6 +514,15 @@
 			buildConfigurations = (
 				175E855F2F690E7000F31747 /* Debug */,
 				175E85602F690E7000F31747 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17D195D02FB8967100BCB9C1 /* Build configuration list for PBXNativeTarget "TreeWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17D195D12FB8967100BCB9C1 /* Debug */,
+				17D195D22FB8967100BCB9C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

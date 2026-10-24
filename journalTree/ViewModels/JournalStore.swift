@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import WidgetKit
 
 // MARK: - AppView
 enum AppView { case tree, form }
@@ -68,6 +69,38 @@ final class JournalStore: ObservableObject {
     private func save() {
         guard let data = try? JSONEncoder().encode(journals) else { return }
         UserDefaults.standard.set(data, forKey: key)
+        updateWidgetData()
+    }
+
+    private func updateWidgetData() {
+        let widgetData: [[String: Any]] = journals.enumerated().compactMap { index, journal in
+            guard index < LeafLayout.positions.count else { return nil }
+            let pos = LeafLayout.positions[index]
+            
+            let imageName: String = {
+                switch journal.mood {
+                case .happy:        return "leafYellow"
+                case .sad:          return "leafBlue"
+                case .angry:        return "leafRed"
+                case .disappointed: return "leafPurple"
+                case .fear:         return "leafGreen"
+                }
+            }()
+            
+            return [
+                "image": imageName,
+                "xOffset": Double(pos.x - 0.5),
+                "yOffset": Double(pos.y - 0.5),
+                "rotation": Double(pos.rotation)
+            ]
+        }
+        
+        if let sharedDefaults = UserDefaults(suiteName: "group.com.nanda.journalTree") {
+            if let jsonData = try? JSONSerialization.data(withJSONObject: widgetData) {
+                sharedDefaults.set(jsonData, forKey: "widget_leaves_json")
+                WidgetCenter.shared.reloadAllTimelines()
+            }
+        }
     }
 
     private func load() {
